@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Registro equipo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Ingrese los datos</h3>
+
+  <ion-item>
+      <ion-label position="floating">Nombre Equipo</ion-label>
+      <ion-input [(ngModel)]="equipo.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="floating">Nombre Representante</ion-label>
+      <ion-input [(ngModel)]="equipo.epresentante"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="floating">Nombre mascota</ion-label>
+      <ion-input [(ngModel)]="equipo.mascota"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Campeonatos Ganados</ion-label>
+    <ion-input [(ngModel)]="equipo.campeonatos"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Foto</ion-label>
+  <ion-input [(ngModel)]="equipo.foto"></ion-input>
+</ion-item>
+
+
+
+  <ion-item>
+
+      {{equipo.name}}
+  </ion-item>
+
+  <ion-item>
+      <ion-button (click)="guardar()" color="dark">Enviar</ion-button>
+  </ion-item>
+
+</ion-content>

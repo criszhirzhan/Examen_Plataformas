@@ -1,5 +1,7 @@
 {
   "name": "FutbolClub",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

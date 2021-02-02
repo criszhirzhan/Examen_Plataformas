@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Lista Equipos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+        Equipos Registrados
+    </ion-list-header>
+
+    <ion-item *ngFor="let equipo of equipos | async">
+        <ion-avatar slot="start">
+            <img src={{equipo.foto}}>
+        </ion-avatar>
+        <ion-label (click)="editarContactoById(contacto.uid)">
+            <h2>{{equipo.name}}</h2>
+            <h3>{{equipo.representante}}</h3>
+            <h3>{{equipo.capeonatos}}</h3>
+            <h3>{{equipo.mascota}}</h3>
+        </ion-label>
+    </ion-item>
+
+</ion-list>
+</ion-content>
